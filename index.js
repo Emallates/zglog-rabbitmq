@@ -30,6 +30,7 @@ _.extend(
 
 rmqManager.prototype.init = function getNewChanel(callback){
 	var _s = this;
+	if(_s.conn) return callback(null, true);
 	amqp.connect(_s.options.url, function(err, conn){
 		if(err) throw err;
 		_s.conn = conn;
