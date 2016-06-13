@@ -18,20 +18,24 @@ function rmqManager(opts) { opts = opts || {};
 	};
 	_s.options.url = opts.url || (_s.options.protocol+'//'+_s.options.host);
 	_s.options.Qs = utils.getQs(opts.Qs || opts.qs || opts.queues);
-
-	amqp.connect(_s.options.url, function(err, conn){
-		if(err) throw err;
-		_s.conn = conn;
-	});
+	_s.init();
 	return _s;
 }
 
 _.extend(
-	rmqManager.prototype, 
+	rmqManager.prototype,
 	require('./lib/consumer'),
 	require('./lib/publisher')
 );
 
+rmqManager.prototype.init = function getNewChanel(callback){
+	var _s = this;
+	amqp.connect(_s.options.url, function(err, conn){
+		if(err) throw err;
+		_s.conn = conn;
+		if(callback) callback(null, true);
+	});
+}
 rmqManager.prototype.getChanel = function getNewChanel(q, callback){
 	this.conn.createChannel(function(err, chanel){
 		if(err) return callback(err);
