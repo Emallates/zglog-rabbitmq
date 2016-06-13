@@ -9,9 +9,11 @@ function rmqManager(opts) { opts = opts || {};
 	var _s = this;
 	if (!(_s instanceof rmqManager)) { return new rmqManager(opts); }
 	_s.options={
+		noAct: (opts.noAck !== undefined) ? opts.noAck : true,
 		protocol:opts.host || 'amqp:',
 		host:opts.host || opts.url || opts.ip || '127.0.0.1',
 		write:opts.canPublish || false,
+		read:opts.canConsume || false,
 		defQ:opts.defaultQ || 'zglog-queue-default'
 	};
 	_s.options.url = _s.options.protocol+'//'+_s.options.host;
