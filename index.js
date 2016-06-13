@@ -16,7 +16,7 @@ function rmqManager(opts) { opts = opts || {};
 		read:opts.canConsume || false,
 		defQ:opts.defaultQ || 'zglog-queue-default'
 	};
-	_s.options.url = _s.options.protocol+'//'+_s.options.host;
+	_s.options.url = opts.url || (_s.options.protocol+'//'+_s.options.host);
 	_s.options.Qs = utils.getQs(opts.Qs || opts.qs || opts.queues);
 
 	amqp.connect(_s.options.url, function(err, conn){
