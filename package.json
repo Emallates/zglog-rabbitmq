@@ -1,0 +1,28 @@
+{
+  "name": "zglog-rabbitmq",
+  "version": "0.0.1",
+  "description": "It is package to communicate with rabbitMQ server.  ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": ["Nauman Ramzan( nomi@emallates.com )", "Zeeshan Ali Shah ( zeeshan@emallates.com )"],
+  "license": "MIT",
+  "dependencies": {
+    "amqplib": "^0.4.2",
+    "lodash": "^4.13.1"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nomi-ramzan/zglog-rabbitmq.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nomi-ramzan/zglog-rabbitmq/issues"
+  },
+  "homepage": "https://github.com/nomi-ramzan/zglog-rabbitmq#readme"
+}
