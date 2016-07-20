@@ -1,6 +1,6 @@
 {
-  "name": "zglog-rabbitmq",
-  "version": "0.0.7",
+  "name": "zlogjs-rabbitmq",
+  "version": "0.0.0",
   "description": "It is package to communicate with rabbitMQ server.  ",
   "main": "index.js",
   "scripts": {
@@ -22,10 +22,10 @@
   "devDependencies": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nomi-ramzan/zglog-rabbitmq.git"
+    "url": "git+https://github.com/Emallates/zlogjs-rabbitmq.git"
   },
   "bugs": {
-    "url": "https://github.com/nomi-ramzan/zglog-rabbitmq/issues"
+    "url": "https://github.com/Emallates/zlogjs-rabbitmq/issues"
   },
-  "homepage": "https://github.com/nomi-ramzan/zglog-rabbitmq#readme"
+  "homepage": "https://github.com/Emallates/zlogjs-rabbitmq#readme"
 }
