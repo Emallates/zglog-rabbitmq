@@ -1,6 +1,6 @@
 {
   "name": "zglog-rabbitmq",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "It is package to communicate with rabbitMQ server.  ",
   "main": "index.js",
   "scripts": {
